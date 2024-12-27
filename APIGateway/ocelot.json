@@ -1,0 +1,57 @@
+{
+		"Routes": [
+			{
+				"DownstreamPathTemplate": "/api/Products",
+				"UpstreamPathTemplate": "/api/Products",
+				"DownstreamScheme": "https",
+				"DownstreamHostAndPorts": [
+					{
+						"Host": "localhost",
+						"Port": 7086
+					}
+				],
+				"UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+			},
+			{
+				"DownstreamPathTemplate": "/api/Users",
+				"UpstreamPathTemplate": "/api/Users",
+				"DownstreamScheme": "https",
+				"DownstreamHostAndPorts": [
+					{
+						"Host": "localhost",
+						"Port": 7220
+					}
+				],
+				"UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+			},
+			{
+				"DownstreamPathTemplate": "/api/Carts",
+				"UpstreamPathTemplate": "/api/Carts",
+				"DownstreamScheme": "https",
+				"DownstreamHostAndPorts": [
+					{
+						"Host": "localhost",
+						"Port": 7185
+					}
+				],
+				"UpstreamHttpMethod": [ "Get", "Post","Delete" ]
+			},
+			{
+				"DownstreamPathTemplate": "/api/Auth/{action}",
+				"UpstreamPathTemplate": "/api/Auth/{action}",
+				"DownstreamScheme": "https",
+				"DownstreamHostAndPorts": [
+					{
+						"Host": "localhost",
+						"Port": 7145
+					}
+				],
+				"UpstreamHttpMethod": [ "Post"]
+			}
+		],
+		"GlobalConfiguration": {
+			"BaseUrl": "https://localhost:5000"
+		}
+	
+
+}
